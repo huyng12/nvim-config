@@ -11,6 +11,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(base_capabiliti
 
 local function setup_lsp_clang()
   require 'lspconfig'.clangd.setup {
+    cmd = { '/usr/bin/clangd' },
     flags = flags,
     on_attach = on_attach,
     capabilities = capabilities,
