@@ -10,8 +10,9 @@ local function setup()
   -- gui
   opt.cmdheight = 0
   opt.cursorline = true
-  -- opt.wildmenu = true
-  -- opt.wildmode = { "longest", "list", "full" }
+  opt.termguicolors = true
+  opt.background = 'dark'
+  vim.cmd('colorscheme embark')
 
   -- tab indent
 	opt.tabstop = 2

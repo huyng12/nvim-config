@@ -32,7 +32,26 @@ local function setup()
         require('Comment').setup()
       end
     }
+
+    -- telescope
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} },
+    }
+
+    -- treesitter
+    use 'nvim-treesitter/nvim-treesitter'
+
+    -- colorschemes
+    use { 'embark-theme/vim', as = 'embark' }
   end)
+
+  require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "cpp" },
+    highlight = {
+      enable = true,
+    },
+  }
 end
 
 return {
