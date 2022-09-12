@@ -1,11 +1,11 @@
 local function setup()
-	local opt = vim.opt
-	local g = vim.g
+  local opt = vim.opt
+  local g = vim.g
 
   -- general
-	opt.number = true
-	opt.relativenumber = true
-	opt.clipboard = { "unnamed", "unnamedplus" }
+  opt.number = true
+  opt.relativenumber = true
+  opt.clipboard = { "unnamed", "unnamedplus" }
 
   -- gui
   opt.cmdheight = 0
@@ -15,19 +15,19 @@ local function setup()
   vim.cmd('colorscheme embark')
 
   -- tab indent
-	opt.tabstop = 2
-	opt.shiftwidth = 2
-	opt.softtabstop = 2
-	opt.expandtab = true
+  opt.tabstop = 2
+  opt.shiftwidth = 2
+  opt.softtabstop = 2
+  opt.expandtab = true
 
-	-- persistent undo
-	opt.undofile = true
-	opt.undodir = vim.fn.expand("$HOME/.config/nvim/undo", nil,  nil)
-	opt.undolevels = 1000
-	opt.undoreload = 10000
+  -- persistent undo
+  opt.undofile = true
+  opt.undodir = vim.fn.expand("$HOME/.config/nvim/undo", nil,  nil)
+  opt.undolevels = 1000
+  opt.undoreload = 10000
 end
 
 return {
-	setup = setup
+  setup = setup
 }
 
